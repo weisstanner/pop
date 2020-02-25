@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Country');
+        data.addColumn('number', 'q2_d');
+        data.addRows([
+['1. Belgium', 6.9],
+['2. Japan', 6.8],
+['3. Korea, South', 6.7],
+['4. Taiwan', 6.7],
+['5. Albania', 6.4],
+['6. France (1963-)', 6.3],
+['7. Indonesia', 6.2],
+['8. Italy', 6.1],
+['9. Ireland', 6.1],
+['10. Benin', 6],
+['11. India', 6],
+['12. Tunisia', 6],
+['13. Lithuania', 5.9],
+['14. Philippines', 5.9],
+['15. Canada', 5.9],
+['16. Austria', 5.9],
+['17. Brazil', 5.9],
+['18. Bangladesh', 5.8],
+['19. Vietnam', 5.7],
+['20. Spain', 5.6],
+['21. Armenia', 5.5],
+['22. Nepal', 5.5],
+['23. Turkey', 5.5],
+['24. China', 5.5],
+['25. Greece', 5.4],
+['26. Cyprus (1975-)', 5.4],
+['27. Croatia', 5.3],
+['28. Poland', 5.3],
+['29. Costa Rica', 5.3],
+['30. Ecuador', 5.3],
+['31. Germany', 5.3],
+['32. Romania', 5.3],
+['33. Slovenia', 5.3],
+['34. Senegal', 5.2],
+['35. Thailand', 5.2],
+['36. Morocco', 5.2],
+['37. Israel', 5.2],
+['38. Cote dIvoire', 5],
+['39. Ethiopia (1993-)', 5],
+['40. Montenegro', 5],
+['41. Macedonia', 4.9],
+['42. Azerbaijan', 4.9],
+['43. Norway', 4.8],
+['44. Kyrgyzstan', 4.8],
+['45. United States', 4.8],
+['46. Pakistan (1971-)', 4.8],
+['47. Sri Lanka', 4.8],
+['48. Portugal', 4.7],
+['49. Cuba', 4.7],
+['50. United Kingdom', 4.6],
+['51. Rwanda', 4.6],
+['52. Egypt', 4.6],
+['53. Hong Kong', 4.6],
+['54. Cambodia', 4.5],
+['55. Moldova', 4.5],
+['56. Cameroon', 4.4],
+['57. Australia', 4.4],
+['58. Chile', 4.4],
+['59. Bosnia-Herzeg.', 4.3],
+['60. Mozambique', 4.3],
+['61. Singapore', 4.3],
+['62. Uganda', 4.3],
+['63. Uruguay', 4.3],
+['64. Ghana', 4.2],
+['65. Botswana', 4.2],
+['66. Bulgaria', 4],
+['67. Colombia', 4],
+['68. Malta', 4],
+['69. South Sudan', 4],
+['70. Sweden', 3.9],
+['71. Kazakhstan', 3.9],
+['72. Czech Republic', 3.8],
+['73. Serbia', 3.8],
+['74. Nigeria', 3.7],
+['75. Finland', 3.7],
+['76. Russia', 3.6],
+['77. Malawi', 3.6],
+['78. Kenya', 3.5],
+['79. Namibia', 3.5],
+['80. Slovakia', 3.4],
+['81. Tanzania', 3.4],
+['82. Madagascar', 3.4],
+['83. Hungary', 3.4],
+['84. UAE', 3.3],
+['85. Denmark', 3.3],
+['86. Mexico', 3.2],
+['87. Lebanon', 3.2],
+['88. Georgia', 3.1],
+['89. Netherlands', 3.1],
+['90. Afghanistan', 3],
+['91. El Salvador', 3],
+['92. Guinea', 3],
+['93. Guyana', 3],
+['94. Iceland', 3],
+['95. Switzerland', 3],
+['96. Ukraine', 3],
+['97. Zimbabwe', 3],
+['98. Estonia', 2.9],
+['99. Algeria', 2.8],
+['100. Jamaica', 2.8],
+['101. Jordan', 2.7],
+['102. South Africa', 2.6],
+['103. Peru', 2.6],
+['104. Latvia', 2.4],
+['105. Bolivia', 2.3],
+['106. Argentina', 2.3],
+['107. Guatemala', 2.3],
+['108. Iraq', 2.3],
+['109. Somalia', 2],
+['110. Tajikistan', 2],
+['111. New Zealand', 1.8],
+['112. Nicaragua', 1.6],
+['113. Venezuela', 1.5],
+['114. Dominican Rep.', 1.5],
+['115. Fiji', 1.3],
+['116. Eritrea', 1]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Public sector employees are hired via a formal examination system',
+                       'width':1250,
+                       'height':4500};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Country');
+        data.addColumn('number', 'q2_g');
+        data.addRows([
+['1. New Zealand', 1.5],
+['2. Ireland', 1.6],
+['3. Norway', 1.9],
+['4. Hong Kong', 2.4],
+['5. India', 2.6],
+['6. Latvia', 2.8],
+['7. Japan', 2.9],
+['8. Botswana', 3.2],
+['9. Sweden', 3.2],
+['10. Barbados', 3.3],
+['11. Netherlands', 3.3],
+['12. Poland', 3.5],
+['13. Thailand', 3.6],
+['14. Denmark', 3.6],
+['15. Iceland', 3.7],
+['16. Taiwan', 3.7],
+['17. France (1963-)', 3.9],
+['18. United Kingdom', 3.9],
+['19. Austria', 4],
+['20. Cambodia', 4],
+['21. Finland', 4],
+['22. Jamaica', 4],
+['23. Senegal', 4],
+['24. Germany', 4],
+['25. Estonia', 4.1],
+['26. Canada', 4.1],
+['27. Cote dIvoire', 4.2],
+['28. Singapore', 4.3],
+['29. Lithuania', 4.4],
+['30. Pakistan (1971-)', 4.4],
+['31. Benin', 4.4],
+['32. Cyprus (1975-)', 4.5],
+['33. Mauritius', 4.5],
+['34. Nepal', 4.5],
+['35. Uganda', 4.5],
+['36. Portugal', 4.5],
+['37. Romania', 4.6],
+['38. Nigeria', 4.6],
+['39. Albania', 4.6],
+['40. Bangladesh', 4.6],
+['41. Indonesia', 4.6],
+['42. Spain', 4.7],
+['43. Guyana', 4.7],
+['44. Togo', 4.7],
+['45. Australia', 4.8],
+['46. Madagascar', 4.8],
+['47. Ghana', 4.8],
+['48. Rwanda', 4.9],
+['49. Italy', 4.9],
+['50. Korea, South', 4.9],
+['51. Bolivia', 5],
+['52. Nicaragua', 5],
+['53. Switzerland', 5],
+['54. Tanzania', 5],
+['55. UAE', 5],
+['56. Peru', 5.1],
+['57. Greece', 5.1],
+['58. Israel', 5.2],
+['59. Bosnia-Herzeg.', 5.2],
+['60. Somalia', 5.2],
+['61. Costa Rica', 5.3],
+['62. Lebanon', 5.3],
+['63. Malta', 5.3],
+['64. Philippines', 5.3],
+['65. Slovenia', 5.3],
+['66. Kenya', 5.3],
+['67. Mozambique', 5.3],
+['68. Vietnam', 5.3],
+['69. South Africa', 5.4],
+['70. Cameroon', 5.4],
+['71. United States', 5.5],
+['72. Turkey', 5.5],
+['73. China', 5.5],
+['74. Slovakia', 5.6],
+['75. Morocco', 5.6],
+['76. Algeria', 5.6],
+['77. Czech Republic', 5.6],
+['78. Zimbabwe', 5.6],
+['79. Macedonia', 5.6],
+['80. Jordan', 5.7],
+['81. Montenegro', 5.7],
+['82. Serbia', 5.7],
+['83. Brazil', 5.7],
+['84. Ethiopia (1993-)', 5.7],
+['85. Egypt', 5.8],
+['86. Iraq', 5.8],
+['87. Sri Lanka', 5.8],
+['88. Bulgaria', 5.8],
+['89. Chile', 5.8],
+['90. Namibia', 5.8],
+['91. Moldova', 5.9],
+['92. Uruguay', 5.9],
+['93. Armenia', 6],
+['94. Colombia', 6],
+['95. Kyrgyzstan', 6],
+['96. South Sudan', 6],
+['97. Croatia', 6.1],
+['98. Hungary', 6.1],
+['99. Argentina', 6.2],
+['100. El Salvador', 6.2],
+['101. Belgium', 6.2],
+['102. Mexico', 6.2],
+['103. Fiji', 6.3],
+['104. Malaysia (1966-)', 6.3],
+['105. Venezuela', 6.4],
+['106. Afghanistan', 6.4],
+['107. Malawi', 6.4],
+['108. Georgia', 6.4],
+['109. Ecuador', 6.5],
+['110. Russia', 6.5],
+['111. Azerbaijan', 6.6],
+['112. Cuba', 6.7],
+['113. Guinea', 6.7],
+['114. Guatemala', 6.8],
+['115. Ukraine', 6.8],
+['116. Dominican Rep.', 6.8],
+['117. Eritrea', 7],
+['118. Kazakhstan', 7],
+['119. Tajikistan', 7]
+        ]);
+
+        // Set chart options
+        var options = {'title':'The top political leadership hires and fires senior public officials',
+                       'width':1250,
+                       'height':4500};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>
